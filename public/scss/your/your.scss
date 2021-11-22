@@ -1,0 +1,233 @@
+.yourContent {
+  background-image: linear-gradient(
+      to right,
+      rgba(167, 232, 189, 0.8),
+      rgba(167, 232, 189, 0.8)
+    ),
+    url(../images/recipe-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 120vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .yourHeader {
+    width: 1100px;
+    margin: 0 auto;
+    //margin-top: 400px;
+    height: 50px;
+    padding-top: 20px;
+    //background-color: purple;
+
+    h1 {
+      font-family: Caveat;
+      font-size: 25;
+    }
+  }
+
+  .yourRecipes {
+    max-width: 1100px;
+    height: 576px;
+    //background-color: bisque;
+    justify-content: space-between;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 20px;
+    //margin-bottom: 100px;
+    .yourRecipe {
+      height: 263px;
+      width: 524px;
+      display: flex;
+      margin-bottom: 70px;
+      padding-right: 50px;
+      //background-color: bisque;
+      display: flex;
+      flex-direction: column;
+      a {
+        width: 127px;
+        height: 42px;
+        background-color: #ffd972;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        font-size: 20px;
+        font-family: Caveat;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+      }
+
+      .udButtons {
+        margin-top: 15px;
+        display: flex;
+        margin-left: 10px;
+        p {
+          margin-left: 14px;
+          width: 127px;
+          height: 42px;
+          background-color: #ffd972;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 25px;
+          font-size: 20px;
+          font-family: Caveat;
+          cursor: pointer;
+          text-decoration: none;
+          color: #000;
+        }
+      }
+
+      .main {
+        display: flex;
+
+        .burger {
+          display: flex;
+
+          height: 263px;
+          width: 300px;
+          background-image: url(../../images/recipe-burger.jpg);
+          background-size: cover;
+          background-repeat: none;
+          background-position: center;
+          border-radius: 25px;
+        }
+
+        .pizza {
+          margin: 0 auto;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          height: 263px;
+          width: 300px;
+          background-image: url(../../images/recipe-pizza.jpg);
+          background-size: cover;
+          background-repeat: none;
+          background-position: center;
+          border-radius: 25px;
+        }
+
+        .chicken {
+          display: flex;
+          height: 263px;
+          width: 300px;
+          background-image: url(../../images/recipe-pilaf.jpg);
+          background-size: cover;
+          background-repeat: none;
+          background-position: center;
+          border-radius: 25px;
+        }
+
+        .chow {
+          display: flex;
+          height: 263px;
+          width: 300px;
+          background-image: url(../../images/recipe-chowmein.jpg);
+          background-size: cover;
+          background-repeat: none;
+          background-position: center;
+          border-radius: 25px;
+        }
+
+        .recipeDetails {
+          width: 224px;
+          background-color: #fff;
+          border-radius: 25px;
+          font-family: GillSans;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 24px;
+          }
+
+          .textHolder {
+            width: 140px;
+            h1 {
+              font-size: 15px;
+              border-bottom: 2px solid black;
+            }
+            p {
+              font-size: 9px;
+            }
+
+            .metaDetail {
+              display: flex;
+              //background-color: cadetblue;
+              margin-bottom: 17px;
+              justify-content: center;
+              text-align: center;
+
+              img {
+                padding-right: 10px;
+              }
+
+              p {
+                padding-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1065px) {
+  .yourContent {
+    height: 1600px;
+
+    .yourHeader {
+      position: absolute;
+      //padding-left: 50px;
+      top: 140px;
+      text-align: center;
+      //background-color: brown;
+    }
+
+    .yourRecipes {
+      margin-top: -600px;
+      justify-content: center;
+      //background-color: blueviolet;
+
+      .yourRecipe {
+        padding-right: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .yourContent {
+    height: 2600px;
+    .yourRecipes {
+      margin-bottom: 900px;
+      justify-content: center;
+      .yourRecipe {
+        width: 300px;
+        height: 500px;
+        .main {
+          display: block;
+
+          .recipeDetails {
+            padding-top: 10px;
+            width: 300px;
+            .textHolder {
+              width: 180px;
+            }
+          }
+        }
+        //background-color: brown;
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.newRecipe {
+  max-width: 980px;
+  min-height: 900px;
+  margin: 0 auto;
+  //background-color: blue;
+  margin-top: 150px;
+
+  .top {
+    display: flex;
+    margin-bottom: 58px;
+
+    //background-color: aqua;
+
+    .imgDiv {
+      margin-right: 40px;
+      //background-color: burlywood;
+      width: 511px;
+      height: 421px;
+      display: flex;
+      text-align: center;
+      justify-content: left;
+      align-items: center;
+
+      h1 {
+        transform: rotate(-90deg);
+        margin-left: -175px;
+        height: 34px;
+        width: 400px;
+        //background-color: brown;
+        font-family: GillSansLight;
+        font-size: 35px;
+      }
+      .img {
+        height: 421px;
+        width: 468px;
+        margin-left: -180px;
+        background-image: url(../../images/recipe-pizza.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    .desc {
+      width: 455px;
+      //background-color: chartreuse;
+
+      h1 {
+        font-family: GillSansLight;
+        font-size: 25px;
+        margin-bottom: 35px;
+      }
+
+      p {
+        font-family: Caveat;
+        font-size: 20px;
+        margin-bottom: 38px;
+      }
+    }
+  }
+
+  .middle {
+    padding-left: 50px;
+    h1 {
+      font-size: 35px;
+      font-family: GillSansLight;
+    }
+
+    p {
+      font-family: Caveat;
+      font-size: 20px;
+    }
+
+    .ingredientList {
+      margin-bottom: 60px;
+    }
+  }
+
+  .editButton {
+    //margin-bottom: 90px;
+    padding-bottom: 100px;
+    //background-color: #ffd972;
+
+    a {
+      width: 127px;
+      height: 42px;
+      display: flex;
+      background-color: #ffd972;
+      text-decoration: none;
+      font-family: Caveat;
+      font-size: 20px;
+      border-radius: 25px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+      margin-left: 50px;
+      color: #000;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .newRecipe {
+    //background-color: red;
+    .top {
+      //background-color: royalblue;
+      flex-direction: column;
+      text-align: left;
+      justify-content: center;
+      max-width: 500px;
+      margin: 0 auto;
+      .imgDiv {
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 50px;
+        margin-bottom: 50px;
+      }
+
+      .desc {
+        padding-left: 25px;
+      }
+    }
+
+    .middle {
+      width: 500px;
+      //background-color: #ffd972;
+      text-align: left;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+
+      flex-direction: column;
+      .middleIngredients {
+        margin-left: -25px;
+        padding-bottom: 20px;
+      }
+      .middleInstructions {
+        padding-bottom: 20px;
+        margin-left: -25px;
+      }
+    }
+
+    .editButton {
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      a {
+        margin-left: 20px;
+      }
+    }
+  }
+}

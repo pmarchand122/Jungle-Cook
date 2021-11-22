@@ -1,0 +1,15 @@
+{
+  "name": "jungle-cook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "firebase local": "firebase serve --only hosting",
+    "firebase deploy": "firebase deploy --except functions"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,1261 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+#app {
+  height: 100vh;
+}
+
+@font-face {
+  font-family: CaveatBold;
+  src: url(fonts/Caveat-Bold.ttf);
+}
+@font-face {
+  font-family: CaveatRegular;
+  src: url(fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: GillSansItalic;
+  src: url(fonts/GillSansItalic.ttf);
+}
+@font-face {
+  font-family: GillSansLight;
+  src: url(fonts/GillSans-Light.ttf);
+}
+@font-face {
+  font-family: GillSans;
+  src: url(fonts/GillSans.ttf);
+}
+.mobile-nav {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  display: none;
+}
+.mobile-nav .fas {
+  color: #000;
+}
+.mobile-nav .fas:hover {
+  cursor: pointer;
+}
+
+.logo {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 250px;
+  height: 55px;
+  z-index: 100;
+}
+
+nav {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 800px;
+  height: 50px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 100;
+}
+nav a {
+  text-decoration: none;
+  font-family: CaveatRegular;
+  color: #000;
+  font-size: 25px;
+}
+nav .currentPage {
+  border-bottom: 3px solid black;
+}
+nav #login {
+  width: 158px;
+  height: 52px;
+  background-color: #ffd972;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 26px;
+}
+
+.active {
+  right: 0px;
+  background-color: beige;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1120px) {
+  nav {
+    height: 100%;
+    width: 180px;
+    right: -200px;
+    z-index: 98;
+    top: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  nav a {
+    margin-bottom: 50px;
+  }
+
+  .mobile-nav {
+    z-index: 99;
+    display: block;
+  }
+}
+.home {
+  height: 100%;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(242, 92, 84, 0.6)), to(rgba(242, 92, 84, 0.6))), url(../images/hero.jpg);
+  background-image: linear-gradient(to right, rgba(242, 92, 84, 0.6), rgba(242, 92, 84, 0.6)), url(../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 120px;
+}
+.home .circle-holder {
+  width: 500px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+.home .circle-holder .little-circle {
+  width: 167px;
+  height: 167px;
+  background-color: #fcbcb8;
+  border-radius: 167px;
+  position: absolute;
+  margin-left: 350px;
+  margin-bottom: 280px;
+  text-align: center;
+  padding-top: 65px;
+}
+.home .circle-holder .little-circle .homeSP {
+  font-size: 10px;
+  font-family: GillSansItalic;
+  width: 107px;
+  margin: 0 auto;
+}
+.home .circle-holder .big-circle {
+  width: 357px;
+  height: 357px;
+  background-color: #ffd972;
+  border-radius: 357px;
+  position: absolute;
+  padding-top: 100px;
+  text-align: center;
+}
+.home .circle-holder .big-circle .homeHeader {
+  font-family: CaveatBold;
+  font-size: 24px;
+}
+.home .circle-holder .big-circle .homeP {
+  padding-top: 30px;
+  margin: 0 auto;
+  width: 164px;
+  height: 80px;
+  font-family: GillSansLight;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 1120px) {
+  .home .circle-holder .little-circle {
+    margin-left: 300px;
+    margin-bottom: 350px;
+  }
+}
+.loginContent {
+  min-height: 100%;
+  width: 100%;
+  background-color: #ffd972;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.loginContent h1 {
+  font-size: 30px;
+  font-family: GillSans;
+  margin-bottom: 50px;
+}
+.loginContent p {
+  font-size: 12px;
+  font-family: GillSansItalic;
+}
+.loginContent form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.loginContent form input {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  font-size: 12px;
+  border-bottom: 2px solid black;
+  margin-bottom: 50px;
+}
+.loginContent form button {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  font-family: Caveat;
+  font-size: 25px;
+  border-radius: 20px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+}
+.loginContent form button:hover {
+  cursor: pointer;
+}
+.loginContent .loginForm {
+  margin-right: 250px;
+  width: 209px;
+  height: 293px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.loginContent .signupForm {
+  width: 251px;
+  height: 449px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+  .loginContent {
+    padding-top: 100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .loginContent .loginForm {
+    margin-right: 0px;
+    margin-bottom: 25px;
+  }
+  .loginContent .signupForm {
+    width: 209px;
+    padding-bottom: 200px;
+  }
+}
+.browseFooter {
+  top: 0px;
+}
+
+.homeFooter {
+  top: -50px;
+}
+
+footer {
+  height: 50px;
+  max-width: 1800px;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: GillSansItalic;
+  color: #393939;
+  font-size: 15px;
+  position: relative;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: -50px;
+}
+footer .copyright {
+  text-align: center;
+  padding-top: 15px;
+}
+footer .social {
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .social img {
+  height: 20px;
+}
+footer .footerLinks {
+  width: 638px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+footer .footerLinks a {
+  text-decoration: none;
+  color: #393939;
+}
+
+@media screen and (max-width: 950px) {
+  footer {
+    font-size: 10px;
+  }
+}
+.form {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 121px;
+  position: relative;
+  max-width: 980px;
+}
+.form h1 {
+  margin-bottom: 70px;
+  font-size: 25px;
+  font-family: Caveat;
+}
+.form p {
+  font-size: 20px;
+  font-family: GillSans;
+}
+.form .submitButton {
+  background-color: #efa7a7;
+  width: 422px;
+  height: 52px;
+  border-radius: 25px;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  right: 0;
+  font-family: Caveat;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 25px;
+}
+.form .info {
+  margin-bottom: 100px;
+  position: relative;
+}
+.form .info .addImg {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 110px;
+  height: 36.2px;
+  border-radius: 25px;
+  background-color: #efa7a7;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Caveat;
+  font-size: 17px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.form .ingredients {
+  margin-bottom: 100px;
+  position: relative;
+}
+.form .ingredients .ingredientBtn {
+  background-color: #efa7a7;
+  width: 38px;
+  height: 38px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  bottom: 54px;
+  right: 0;
+  cursor: pointer;
+}
+.form .instructions {
+  margin-bottom: 300px;
+  position: relative;
+}
+.form .instructions .instructionBtn {
+  background-color: #efa7a7;
+  width: 38px;
+  height: 38px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  bottom: 54px;
+  right: 0;
+  cursor: pointer;
+}
+
+.form input {
+  height: 44px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-style: none;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  font-size: 20px;
+  color: #000;
+  border-bottom: 2px solid black;
+  margin-bottom: 50px;
+}
+
+.browseContent {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(167, 232, 189, 0.8)), to(rgba(167, 232, 189, 0.8))), url(../images/recipe-hero.jpg);
+  background-image: linear-gradient(to right, rgba(167, 232, 189, 0.8), rgba(167, 232, 189, 0.8)), url(../images/recipe-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.browseContent .browseHeader {
+  width: 1100px;
+  margin: 0 auto;
+  height: 50px;
+  padding-top: 20px;
+}
+.browseContent .browseHeader h1 {
+  font-family: Caveat;
+  font-size: 25;
+}
+.browseContent .browseRecipes {
+  max-width: 1100px;
+  height: 576px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  margin-top: 20px;
+  padding-bottom: 100px;
+}
+.browseContent .browseRecipes .recipe {
+  height: 263px;
+  width: 524px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+.browseContent .browseRecipes .recipe .burger {
+  height: 263px;
+  width: 300px;
+  background-image: url(../../images/recipe-burger.jpg);
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  border-radius: 25px;
+}
+.browseContent .browseRecipes .recipe .pizza {
+  height: 263px;
+  width: 300px;
+  background-image: url(../../images/recipe-pizza.jpg);
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  border-radius: 25px;
+}
+.browseContent .browseRecipes .recipe .chicken {
+  height: 263px;
+  width: 300px;
+  background-image: url(../../images/recipe-pilaf.jpg);
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  border-radius: 25px;
+}
+.browseContent .browseRecipes .recipe .chow {
+  height: 263px;
+  width: 300px;
+  background-image: url(../../images/recipe-chowmein.jpg);
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  border-radius: 25px;
+}
+.browseContent .browseRecipes .recipe .recipeDetails {
+  width: 224px;
+  background-color: #fff;
+  border-radius: 25px;
+  font-family: GillSans;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.browseContent .browseRecipes .recipe .recipeDetails img {
+  height: 24px;
+}
+.browseContent .browseRecipes .recipe .recipeDetails .textHolder {
+  width: 140px;
+}
+.browseContent .browseRecipes .recipe .recipeDetails .textHolder h1 {
+  font-size: 15px;
+  border-bottom: 2px solid black;
+}
+.browseContent .browseRecipes .recipe .recipeDetails .textHolder p {
+  font-size: 9px;
+}
+.browseContent .browseRecipes .recipe .recipeDetails .textHolder .metaDetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 17px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.browseContent .browseRecipes .recipe .recipeDetails .textHolder .metaDetail img {
+  padding-right: 10px;
+}
+.browseContent .browseRecipes .recipe .recipeDetails .textHolder .metaDetail p {
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 1065px) {
+  .browseContent {
+    height: 1600px;
+  }
+  .browseContent .browseHeader {
+    position: absolute;
+    top: 140px;
+    text-align: center;
+  }
+  .browseContent .browseRecipes {
+    margin-top: -600px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 560px) {
+  .browseContent {
+    height: 2600px;
+  }
+  .browseContent .browseRecipes {
+    margin-bottom: 900px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .browseContent .browseRecipes .recipe {
+    width: 300px;
+    height: 500px;
+    display: block;
+  }
+  .browseContent .browseRecipes .recipe .recipeDetails {
+    padding-top: 10px;
+    width: 300px;
+  }
+  .browseContent .browseRecipes .recipe .recipeDetails .textHolder {
+    width: 180px;
+  }
+}
+.yourContent {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(167, 232, 189, 0.8)), to(rgba(167, 232, 189, 0.8))), url(../images/recipe-hero.jpg);
+  background-image: linear-gradient(to right, rgba(167, 232, 189, 0.8), rgba(167, 232, 189, 0.8)), url(../images/recipe-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 120vh;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.yourContent .yourHeader {
+  width: 1100px;
+  margin: 0 auto;
+  height: 50px;
+  padding-top: 20px;
+}
+.yourContent .yourHeader h1 {
+  font-family: Caveat;
+  font-size: 25;
+}
+.yourContent .yourRecipes {
+  max-width: 1100px;
+  height: 576px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  margin-top: 20px;
+}
+.yourContent .yourRecipes .yourRecipe {
+  height: 263px;
+  width: 524px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 70px;
+  padding-right: 50px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.yourContent .yourRecipes .yourRecipe a {
+  width: 127px;
+  height: 42px;
+  background-color: #ffd972;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 25px;
+  font-size: 20px;
+  font-family: Caveat;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+.yourContent .yourRecipes .yourRecipe .udButtons {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
+}
+.yourContent .yourRecipes .yourRecipe .udButtons p {
+  margin-left: 14px;
+  width: 127px;
+  height: 42px;
+  background-color: #ffd972;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 25px;
+  font-size: 20px;
+  font-family: Caveat;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+.yourContent .yourRecipes .yourRecipe .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.yourContent .yourRecipes .yourRecipe .main .burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 263px;
+  width: 300px;
+  background-image: url(../../images/recipe-burger.jpg);
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  border-radius: 25px;
+}
+.yourContent .yourRecipes .yourRecipe .main .pizza {
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 263px;
+  width: 300px;
+  background-image: url(../../images/recipe-pizza.jpg);
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  border-radius: 25px;
+}
+.yourContent .yourRecipes .yourRecipe .main .chicken {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 263px;
+  width: 300px;
+  background-image: url(../../images/recipe-pilaf.jpg);
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  border-radius: 25px;
+}
+.yourContent .yourRecipes .yourRecipe .main .chow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 263px;
+  width: 300px;
+  background-image: url(../../images/recipe-chowmein.jpg);
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  border-radius: 25px;
+}
+.yourContent .yourRecipes .yourRecipe .main .recipeDetails {
+  width: 224px;
+  background-color: #fff;
+  border-radius: 25px;
+  font-family: GillSans;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.yourContent .yourRecipes .yourRecipe .main .recipeDetails img {
+  height: 24px;
+}
+.yourContent .yourRecipes .yourRecipe .main .recipeDetails .textHolder {
+  width: 140px;
+}
+.yourContent .yourRecipes .yourRecipe .main .recipeDetails .textHolder h1 {
+  font-size: 15px;
+  border-bottom: 2px solid black;
+}
+.yourContent .yourRecipes .yourRecipe .main .recipeDetails .textHolder p {
+  font-size: 9px;
+}
+.yourContent .yourRecipes .yourRecipe .main .recipeDetails .textHolder .metaDetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 17px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.yourContent .yourRecipes .yourRecipe .main .recipeDetails .textHolder .metaDetail img {
+  padding-right: 10px;
+}
+.yourContent .yourRecipes .yourRecipe .main .recipeDetails .textHolder .metaDetail p {
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 1065px) {
+  .yourContent {
+    height: 1600px;
+  }
+  .yourContent .yourHeader {
+    position: absolute;
+    top: 140px;
+    text-align: center;
+  }
+  .yourContent .yourRecipes {
+    margin-top: -600px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .yourContent .yourRecipes .yourRecipe {
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .yourContent {
+    height: 2600px;
+  }
+  .yourContent .yourRecipes {
+    margin-bottom: 900px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .yourContent .yourRecipes .yourRecipe {
+    width: 300px;
+    height: 500px;
+  }
+  .yourContent .yourRecipes .yourRecipe .main {
+    display: block;
+  }
+  .yourContent .yourRecipes .yourRecipe .main .recipeDetails {
+    padding-top: 10px;
+    width: 300px;
+  }
+  .yourContent .yourRecipes .yourRecipe .main .recipeDetails .textHolder {
+    width: 180px;
+  }
+}
+.newRecipe {
+  max-width: 980px;
+  min-height: 900px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+.newRecipe .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 58px;
+}
+.newRecipe .top .imgDiv {
+  margin-right: 40px;
+  width: 511px;
+  height: 421px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.newRecipe .top .imgDiv h1 {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin-left: -175px;
+  height: 34px;
+  width: 400px;
+  font-family: GillSansLight;
+  font-size: 35px;
+}
+.newRecipe .top .imgDiv .img {
+  height: 421px;
+  width: 468px;
+  margin-left: -180px;
+  background-image: url(../../images/recipe-pizza.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.newRecipe .top .desc {
+  width: 455px;
+}
+.newRecipe .top .desc h1 {
+  font-family: GillSansLight;
+  font-size: 25px;
+  margin-bottom: 35px;
+}
+.newRecipe .top .desc p {
+  font-family: Caveat;
+  font-size: 20px;
+  margin-bottom: 38px;
+}
+.newRecipe .middle {
+  padding-left: 50px;
+}
+.newRecipe .middle h1 {
+  font-size: 35px;
+  font-family: GillSansLight;
+}
+.newRecipe .middle p {
+  font-family: Caveat;
+  font-size: 20px;
+}
+.newRecipe .middle .ingredientList {
+  margin-bottom: 60px;
+}
+.newRecipe .editButton {
+  padding-bottom: 100px;
+}
+.newRecipe .editButton a {
+  width: 127px;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffd972;
+  text-decoration: none;
+  font-family: Caveat;
+  font-size: 20px;
+  border-radius: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 60px;
+  margin-left: 50px;
+  color: #000;
+}
+
+@media screen and (max-width: 1100px) {
+  .newRecipe .top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .newRecipe .top .imgDiv {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 50px;
+    margin-bottom: 50px;
+  }
+  .newRecipe .top .desc {
+    padding-left: 25px;
+  }
+  .newRecipe .middle {
+    width: 500px;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .newRecipe .middle .middleIngredients {
+    margin-left: -25px;
+    padding-bottom: 20px;
+  }
+  .newRecipe .middle .middleInstructions {
+    padding-bottom: 20px;
+    margin-left: -25px;
+  }
+  .newRecipe .editButton {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .newRecipe .editButton a {
+    margin-left: 20px;
+  }
+}
+.editForm {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 121px;
+  position: relative;
+  max-width: 980px;
+}
+.editForm h1 {
+  margin-bottom: 70px;
+  font-size: 25px;
+  font-family: Caveat;
+}
+.editForm p {
+  font-size: 20px;
+  font-family: GillSans;
+}
+.editForm .info {
+  margin-bottom: 100px;
+  position: relative;
+}
+.editForm .info .editImg {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 110px;
+  height: 36.2px;
+  border-radius: 25px;
+  background-color: #efa7a7;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Caveat;
+  font-size: 17px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.editForm .editIngredients {
+  margin-bottom: 100px;
+  position: relative;
+}
+.editForm .editIngredients .editIngredientBtn {
+  background-color: #efa7a7;
+  width: 38px;
+  height: 38px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  bottom: 54px;
+  right: 0;
+  cursor: pointer;
+}
+.editForm .editInstructions {
+  margin-bottom: 300px;
+  position: relative;
+}
+.editForm .editInstructions .editInstructionBtn {
+  background-color: #efa7a7;
+  width: 38px;
+  height: 38px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  bottom: 54px;
+  right: 0;
+  cursor: pointer;
+}
+.editForm .submitEditButton {
+  background-color: #efa7a7;
+  width: 422px;
+  height: 52px;
+  border-radius: 25px;
+  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  right: 0;
+  font-family: Caveat;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 25px;
+}
+
+.editForm input {
+  height: 44px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-style: none;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  font-size: 20px;
+  color: #000;
+  border-bottom: 2px solid black;
+  margin-bottom: 50px;
+}

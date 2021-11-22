@@ -1,0 +1,44 @@
+<div class="form">
+  <h1 id="createHeader">Create your recipe!</h1>
+  <div class="info">
+    <input type="text" id="recipeImage" placeholder="Recipe Image URL" />
+    <input type="text" id="recipeName" placeholder="Recipe Name" />
+    <input type="text" id="recipeDesc" placeholder="Recipe Description" />
+    <input type="text" id="recipeTotalTime" placeholder="Recipe Total Time" />
+    <input
+      type="text"
+      id="recipeServingSize"
+      placeholder="Recipe Serving Size"
+    />
+
+    <div onclick="addImage()" class="addImg">
+      <span class="addImage">Add Image</span>
+    </div>
+  </div>
+
+  <div class="ingredients">
+    <p>Enter ingredients:</p>
+    <input id="ind1" type="text" placeholder="Ingredient 1" />
+    <input id="ind2" type="text" placeholder="Ingredient 2" />
+    <input id="ind3" type="text" placeholder="Ingredient 3" />
+
+    <div onclick="addIngred()" class="ingredientBtn">
+      <span class="addingredient">+</span>
+    </div>
+  </div>
+
+  <div class="instructions">
+    <p>Enter instructions:</p>
+    <input id="inst1" type="text" placeholder="Instruction 1" />
+    <input id="inst2" type="text" placeholder="Instruction 2" />
+    <input id="inst3" type="text" placeholder="Instruction 3" />
+
+    <div onclick="addInstruction()" class="instructionBtn">
+      <span class="addinstruction">+</span>
+    </div>
+  </div>
+
+  <div class="submitButton" onclick="createRecipe()">
+    <span class="submit">Create Recipe</span>
+  </div>
+</div>

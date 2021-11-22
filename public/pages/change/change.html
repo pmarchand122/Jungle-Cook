@@ -1,0 +1,43 @@
+<div class="editForm">
+  <h1 id="editHeader">Edit your recipe!</h1>
+  <div class="info">
+    <input
+      type="text"
+      id="editImage"
+      placeholder="Edit Recipe Image"
+      readonly
+    />
+    <input type="text" id="editName" placeholder="Edit Name" />
+    <input type="text" id="editDesc" placeholder="Edit Description" />
+    <input type="text" id="editTotalTime" placeholder="Edit Total Time" />
+    <input type="text" id="editServingSize" placeholder="Edit Serving Size" />
+
+    <div onclick="editImage()" class="editImg">
+      <span class="editImage">Add Image</span>
+    </div>
+  </div>
+
+  <div class="editIngredients">
+    <p>Enter ingredients:</p>
+    <input id="editInd1" type="text" placeholder="Edit Ingredient 1" />
+    <input id="editInd2" type="text" placeholder="Edit Ingredient 2" />
+    <input id="editInd3" type="text" placeholder="Edit Ingredient 3" />
+
+    <div onclick="addIngredToEdit()" class="editIngredientBtn">
+      <span class="addingredient">+</span>
+    </div>
+  </div>
+
+  <div class="editInstructions">
+    <p>Enter instructions:</p>
+    <input id="editInst1" type="text" placeholder="Edit Instruction #1" />
+    <input id="editInst2" type="text" placeholder="Edit Instruction #2" />
+    <input id="editInst3" type="text" placeholder="Edit Instruction #3" />
+
+    <div onclick="addInstructionToEdit()" class="editInstructionBtn">
+      <span class="addinstruction">+</span>
+    </div>
+  </div>
+
+  <div id="submitHolder"></div>
+</div>

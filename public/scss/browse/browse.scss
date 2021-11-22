@@ -1,0 +1,173 @@
+.browseContent {
+  background-image: linear-gradient(
+      to right,
+      rgba(167, 232, 189, 0.8),
+      rgba(167, 232, 189, 0.8)
+    ),
+    url(../images/recipe-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .browseHeader {
+    width: 1100px;
+    margin: 0 auto;
+    height: 50px;
+    padding-top: 20px;
+
+    h1 {
+      font-family: Caveat;
+      font-size: 25;
+    }
+  }
+
+  .browseRecipes {
+    max-width: 1100px;
+    height: 576px;
+    justify-content: space-between;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 20px;
+    padding-bottom: 100px;
+    .recipe {
+      height: 263px;
+      width: 524px;
+      display: flex;
+      margin-bottom: 50px;
+      //background-color: bisque;
+
+      .burger {
+        height: 263px;
+        width: 300px;
+        background-image: url(../../images/recipe-burger.jpg);
+        background-size: cover;
+        background-repeat: none;
+        background-position: center;
+        border-radius: 25px;
+      }
+
+      .pizza {
+        height: 263px;
+        width: 300px;
+        background-image: url(../../images/recipe-pizza.jpg);
+        background-size: cover;
+        background-repeat: none;
+        background-position: center;
+        border-radius: 25px;
+      }
+
+      .chicken {
+        height: 263px;
+        width: 300px;
+        background-image: url(../../images/recipe-pilaf.jpg);
+        background-size: cover;
+        background-repeat: none;
+        background-position: center;
+        border-radius: 25px;
+      }
+
+      .chow {
+        height: 263px;
+        width: 300px;
+        background-image: url(../../images/recipe-chowmein.jpg);
+        background-size: cover;
+        background-repeat: none;
+        background-position: center;
+        border-radius: 25px;
+      }
+
+      .recipeDetails {
+        width: 224px;
+        background-color: #fff;
+        border-radius: 25px;
+        font-family: GillSans;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 24px;
+        }
+
+        .textHolder {
+          width: 140px;
+          h1 {
+            font-size: 15px;
+            border-bottom: 2px solid black;
+          }
+          p {
+            font-size: 9px;
+          }
+
+          .metaDetail {
+            display: flex;
+            //background-color: cadetblue;
+            margin-bottom: 17px;
+            justify-content: center;
+            text-align: center;
+
+            img {
+              padding-right: 10px;
+            }
+
+            p {
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1065px) {
+  .browseContent {
+    height: 1600px;
+
+    .browseHeader {
+      position: absolute;
+      //padding-left: 50px;
+      top: 140px;
+      text-align: center;
+      //background-color: brown;
+    }
+
+    .browseRecipes {
+      margin-top: -600px;
+      justify-content: center;
+      //background-color: blueviolet;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .browseContent {
+    height: 2600px;
+    .browseRecipes {
+      margin-bottom: 900px;
+      justify-content: center;
+      .recipe {
+        width: 300px;
+        height: 500px;
+        display: block;
+        //background-color: brown;
+        .recipeDetails {
+          padding-top: 10px;
+          width: 300px;
+          .textHolder {
+            width: 180px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+#app {
+  height: 100vh;
+}
+
+//Use awesome fonts for icons
+
+@font-face {
+  font-family: CaveatBold;
+  src: url(fonts/Caveat-Bold.ttf);
+}
+
+@font-face {
+  font-family: CaveatRegular;
+  src: url(fonts/Caveat-Regular.ttf);
+}
+
+@font-face {
+  font-family: GillSansItalic;
+  src: url(fonts/GillSansItalic.ttf);
+}
+
+@font-face {
+  font-family: GillSansLight;
+  src: url(fonts/GillSans-Light.ttf);
+}
+
+@font-face {
+  font-family: GillSans;
+  src: url(fonts/GillSans.ttf);
+}
