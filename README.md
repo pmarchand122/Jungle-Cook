@@ -1,6 +1,6 @@
 # Jungle-Cook
 
-fully-funcitoning CRUD application using pure JavaScript, jQuery, and Firebase.
+fully-funcitoning single-page CRUD application made with pure JavaScript, CSS, HTML, jQuery, and Firebase.
 
 # Live Link
 
